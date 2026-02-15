@@ -15,3 +15,8 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.5"
 libraryDependencies += "org.apache.hadoop" % "hadoop-aws" % "3.3.4"
 libraryDependencies += "com.amazonaws" % "aws-java-sdk-bundle" % "1.12.262"
 
+libraryDependencies += "org.postgresql" % "postgresql" % "42.7.2"
+
+// Autoriser l'accès aux modules internes de Java pour Spark
+run / fork := true
+run / javaOptions += "--add-exports=java.base/sun.nio.ch=ALL-UNNAMED"

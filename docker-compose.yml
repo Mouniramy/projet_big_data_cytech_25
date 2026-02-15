@@ -79,6 +79,18 @@ services:
     networks:
       - spark-network
 
+  postgres-dw:
+    image: postgres:15
+    container_name: postgres-dw
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nyc_dw
+    ports:
+      - "5432:5432"
+    networks:
+      - spark-network
+
 networks:
   spark-network:
     driver: bridge
