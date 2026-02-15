@@ -51,3 +51,9 @@ minio-data
 
 ### Hadoop ###
 hadoop
+
+*.parquet
+*.csv
+spark-warehouse/
+metastore_db/
+.DS_Store
