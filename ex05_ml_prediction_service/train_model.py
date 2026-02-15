@@ -34,7 +34,7 @@ def load_data_from_minio(bucket_name, folder_name):
 
     # 1. Lister les fichiers dans le dossier
     response = s3.list_objects_v2(Bucket=bucket_name, Prefix=folder_name)
-    
+
     parts = []
     for obj in response.get('Contents', []):
         key = obj['Key']
